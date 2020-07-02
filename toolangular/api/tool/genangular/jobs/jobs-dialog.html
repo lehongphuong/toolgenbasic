@@ -1,0 +1,137 @@
+<mat-card class="border border-info">	
+    <div class="alert alert-info text-center" role="alert">	
+        <h5 class="text-uppercase font-weight-bolder">Thông tin Jobs</h5>	
+    </div>	
+	
+    <mat-card-content class="custom-overflow">	
+        <!-- idcompany field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.idcompany" [required]="'true'" placeholder="Idcompany">	
+        </mat-form-field>	
+	
+        <!-- position field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.position" [required]="'true'" placeholder="Position">	
+        </mat-form-field>	
+	
+        <!-- amountrecruitment field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.amountrecruitment" [required]="'true'" placeholder="Amountrecruitment">	
+        </mat-form-field>	
+	
+        <!-- positionrecruitment field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.positionrecruitment" [required]="'true'" placeholder="Positionrecruitment">	
+        </mat-form-field>	
+	
+        <!-- salary field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.salary" [required]="'true'" placeholder="Salary">	
+        </mat-form-field>	
+	
+        <!-- asomission field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.asomission" [required]="'true'" placeholder="Asomission">	
+        </mat-form-field>	
+	
+        <!-- addresswork field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.addresswork" [required]="'true'" placeholder="Addresswork">	
+        </mat-form-field>	
+	
+        <!-- career field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.career" [required]="'true'" placeholder="Career">	
+        </mat-form-field>	
+	
+        <!-- descriptionwork field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.descriptionwork" [required]="'true'" placeholder="Descriptionwork">	
+        </mat-form-field>	
+	
+        <!-- benefit field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.benefit" [required]="'true'" placeholder="Benefit">	
+        </mat-form-field>	
+	
+        <!-- exprience field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.exprience" [required]="'true'" placeholder="Exprience">	
+        </mat-form-field>	
+	
+        <!-- academiclevel field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.academiclevel" [required]="'true'" placeholder="Academiclevel">	
+        </mat-form-field>	
+	
+        <!-- sex field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.sex" [required]="'true'" placeholder="Sex">	
+        </mat-form-field>	
+	
+        <!-- languagelevel field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.languagelevel" [required]="'true'" placeholder="Languagelevel">	
+        </mat-form-field>	
+	
+        <!-- deadlineapply field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.deadlineapply" [required]="'true'" placeholder="Deadlineapply">	
+        </mat-form-field>	
+	
+        <!-- requirementwork field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.requirementwork" [required]="'true'" placeholder="Requirementwork">	
+        </mat-form-field>	
+	
+        <!-- requirementdocument field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.requirementdocument" [required]="'true'" placeholder="Requirementdocument">	
+        </mat-form-field>	
+	
+        <!-- fullname field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.fullname" [required]="'true'" placeholder="Fullname">	
+        </mat-form-field>	
+	
+        <!-- phone field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.phone" [required]="'true'" placeholder="Phone">	
+        </mat-form-field>	
+	
+        <!-- email field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.email" [required]="'true'" placeholder="Email">	
+        </mat-form-field>	
+	
+        <!-- positioncontact field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.positioncontact" [required]="'true'" placeholder="Positioncontact">	
+        </mat-form-field>	
+	
+        <!-- point field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.point" [required]="'true'" placeholder="Point">	
+        </mat-form-field>	
+	
+        <!-- startads field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.startads" [required]="'true'" placeholder="Startads">	
+        </mat-form-field>	
+	
+        <!-- endads field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.endads" [required]="'true'" placeholder="Endads">	
+        </mat-form-field>	
+	
+    </mat-card-content>	
+	
+    <div class="text-center">	
+        <button *ngIf="type == 1" (click)="onDeleteClick()" class="btn btn-danger custom-margin-button" mat-button>Xóa	
+        </button>	
+        <button class="btn btn-warning custom-margin-button" mat-button [mat-dialog-close]="data.animal">Đóng</button>	
+        <button cdkFocusInitial (click)="onOkClick()" class="btn btn-info custom-margin-button" mat-button>Đồng	
+            ý</button>	
+    </div>	
+	
+</mat-card>	

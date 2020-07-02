@@ -1,0 +1,57 @@
+<mat-card class="border border-info">	
+    <div class="alert alert-info text-center" role="alert">	
+        <h5 class="text-uppercase font-weight-bolder">Thông tin Coaching</h5>	
+    </div>	
+	
+    <mat-card-content class="custom-overflow">	
+        <!-- fullname field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.fullname" [required]="'true'" placeholder="Fullname">	
+        </mat-form-field>	
+	
+        <!-- born field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.born" [required]="'true'" placeholder="Born">	
+        </mat-form-field>	
+	
+        <!-- sex field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.sex" [required]="'true'" placeholder="Sex">	
+        </mat-form-field>	
+	
+        <!-- phone field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.phone" [required]="'true'" placeholder="Phone">	
+        </mat-form-field>	
+	
+        <!-- address field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.address" [required]="'true'" placeholder="Address">	
+        </mat-form-field>	
+	
+        <!-- about field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.about" [required]="'true'" placeholder="About">	
+        </mat-form-field>	
+	
+        <!-- skill field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.skill" [required]="'true'" placeholder="Skill">	
+        </mat-form-field>	
+	
+        <!-- avatar field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.avatar" [required]="'true'" placeholder="Avatar">	
+        </mat-form-field>	
+	
+    </mat-card-content>	
+	
+    <div class="text-center">	
+        <button *ngIf="type == 1" (click)="onDeleteClick()" class="btn btn-danger custom-margin-button" mat-button>Xóa	
+        </button>	
+        <button class="btn btn-warning custom-margin-button" mat-button [mat-dialog-close]="data.animal">Đóng</button>	
+        <button cdkFocusInitial (click)="onOkClick()" class="btn btn-info custom-margin-button" mat-button>Đồng	
+            ý</button>	
+    </div>	
+	
+</mat-card>	

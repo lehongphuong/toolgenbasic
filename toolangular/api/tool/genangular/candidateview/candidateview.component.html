@@ -1,0 +1,93 @@
+<mat-card class="title-block">                                                                                
+    <div class="row">                                                                                         
+        <div class="col-md-12 title-main">                                                                    
+            <p>Quản Lý Người Dùng</p>                                                                           
+        </div>                                                                                                  
+    </div>                                                                                                      
+</mat-card>                                                                                                     
+                                                                                                                
+<!-- select-top -->                                                                                             
+<mat-card class="system-custom">                                                                              
+    <div class="row">                                                                                         
+        <div class="col-md-6 col-xs-12">                                                                      
+            <mat-form-field class="example-full-width">                                                       
+                <mat-label>Tên Người Dùng</mat-label>                                                           
+                <input matInput placeholder="Nhập tên người dùng..." />                                       
+            </mat-form-field>                                                                                   
+        </div>                                                                                                  
+        <div class="col-md-6">                                                                                
+            <div class="example-button-row contain-button-filter">                                            
+                <button class="mb-2 mr-2 btn-transition btn btn-outline-primary button-filter">Lọc            
+                </button>                                                                                       
+            </div>                                                                                              
+        </div>                                                                                                  
+    </div>                                                                                                      
+</mat-card>                                                                                                     
+<!--  end select-top -->                                                                                        
+                                                                                                                
+<!-- button crud -->                                                                                            
+<mat-card class="button-system-custom title-header-crud">                                                     
+    <div class="row">                                                                                         
+        <div class="col-md-12">                                                                               
+            <a class="button-action acept" (click)="onInsertData()">                                        
+                <i class="fa fa-fw" aria-hidden="true" title="Thêm mới"></i>                             
+                <span>Thêm mới</span>                                                                           
+            </a>                                                                                                
+            <div class="clear"></div>                                                                         
+        </div>                                                                                                  
+    </div>                                                                                                      
+                                                                                                                
+    <mat-form-field>                                                                                            
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Tìm kiếm giao dịch">        
+    </mat-form-field>                                                                                           
+</mat-card>                                                                                                     
+<!-- end button crud-->                                                                                         
+	
+<div class="mat-elevation-z8">	
+<table mat-table [dataSource]="dataSource" matSort>	
+	
+        <!-- id Column -->	
+        <ng-container matColumnDef="id">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>	
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>	
+        </ng-container>	
+	
+        <!-- idcandidate Column -->	
+        <ng-container matColumnDef="idcandidate">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Idcandidate </th>	
+          <td mat-cell *matCellDef="let element"> {{element.idcandidate}} </td>	
+        </ng-container>	
+	
+        <!-- idcompany Column -->	
+        <ng-container matColumnDef="idcompany">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Idcompany </th>	
+          <td mat-cell *matCellDef="let element"> {{element.idcompany}} </td>	
+        </ng-container>	
+	
+        <!-- startdate Column -->	
+        <ng-container matColumnDef="startdate">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Startdate </th>	
+          <td mat-cell *matCellDef="let element"> {{element.startdate}} </td>	
+        </ng-container>	
+	
+        <!-- phone Column -->	
+        <ng-container matColumnDef="phone">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>	
+          <td mat-cell *matCellDef="let element"> {{element.phone}} </td>	
+        </ng-container>	
+	
+        <!-- point Column -->	
+        <ng-container matColumnDef="point">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Point </th>	
+          <td mat-cell *matCellDef="let element"> {{element.point}} </td>	
+        </ng-container>	
+	
+	
+	
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>	
+<tr mat-row (dblclick)="onUpdateData(row)" class="example-element-row" *matRowDef="let row; columns: displayedColumns;">	
+</tr>	
+</table>	
+	
+<mat-paginator [pageSizeOptions]="[5, 10, 20, 40]" showFirstLastButtons></mat-paginator>	
+</div>	

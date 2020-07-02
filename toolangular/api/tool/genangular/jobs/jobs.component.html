@@ -1,0 +1,207 @@
+<mat-card class="title-block">                                                                                
+    <div class="row">                                                                                         
+        <div class="col-md-12 title-main">                                                                    
+            <p>Quản Lý Người Dùng</p>                                                                           
+        </div>                                                                                                  
+    </div>                                                                                                      
+</mat-card>                                                                                                     
+                                                                                                                
+<!-- select-top -->                                                                                             
+<mat-card class="system-custom">                                                                              
+    <div class="row">                                                                                         
+        <div class="col-md-6 col-xs-12">                                                                      
+            <mat-form-field class="example-full-width">                                                       
+                <mat-label>Tên Người Dùng</mat-label>                                                           
+                <input matInput placeholder="Nhập tên người dùng..." />                                       
+            </mat-form-field>                                                                                   
+        </div>                                                                                                  
+        <div class="col-md-6">                                                                                
+            <div class="example-button-row contain-button-filter">                                            
+                <button class="mb-2 mr-2 btn-transition btn btn-outline-primary button-filter">Lọc            
+                </button>                                                                                       
+            </div>                                                                                              
+        </div>                                                                                                  
+    </div>                                                                                                      
+</mat-card>                                                                                                     
+<!--  end select-top -->                                                                                        
+                                                                                                                
+<!-- button crud -->                                                                                            
+<mat-card class="button-system-custom title-header-crud">                                                     
+    <div class="row">                                                                                         
+        <div class="col-md-12">                                                                               
+            <a class="button-action acept" (click)="onInsertData()">                                        
+                <i class="fa fa-fw" aria-hidden="true" title="Thêm mới"></i>                             
+                <span>Thêm mới</span>                                                                           
+            </a>                                                                                                
+            <div class="clear"></div>                                                                         
+        </div>                                                                                                  
+    </div>                                                                                                      
+                                                                                                                
+    <mat-form-field>                                                                                            
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Tìm kiếm giao dịch">        
+    </mat-form-field>                                                                                           
+</mat-card>                                                                                                     
+<!-- end button crud-->                                                                                         
+	
+<div class="mat-elevation-z8">	
+<table mat-table [dataSource]="dataSource" matSort>	
+	
+        <!-- id Column -->	
+        <ng-container matColumnDef="id">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>	
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>	
+        </ng-container>	
+	
+        <!-- idcompany Column -->	
+        <ng-container matColumnDef="idcompany">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Idcompany </th>	
+          <td mat-cell *matCellDef="let element"> {{element.idcompany}} </td>	
+        </ng-container>	
+	
+        <!-- position Column -->	
+        <ng-container matColumnDef="position">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Position </th>	
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>	
+        </ng-container>	
+	
+        <!-- amountrecruitment Column -->	
+        <ng-container matColumnDef="amountrecruitment">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Amountrecruitment </th>	
+          <td mat-cell *matCellDef="let element"> {{element.amountrecruitment}} </td>	
+        </ng-container>	
+	
+        <!-- positionrecruitment Column -->	
+        <ng-container matColumnDef="positionrecruitment">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Positionrecruitment </th>	
+          <td mat-cell *matCellDef="let element"> {{element.positionrecruitment}} </td>	
+        </ng-container>	
+	
+        <!-- salary Column -->	
+        <ng-container matColumnDef="salary">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Salary </th>	
+          <td mat-cell *matCellDef="let element"> {{element.salary}} </td>	
+        </ng-container>	
+	
+        <!-- asomission Column -->	
+        <ng-container matColumnDef="asomission">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Asomission </th>	
+          <td mat-cell *matCellDef="let element"> {{element.asomission}} </td>	
+        </ng-container>	
+	
+        <!-- addresswork Column -->	
+        <ng-container matColumnDef="addresswork">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Addresswork </th>	
+          <td mat-cell *matCellDef="let element"> {{element.addresswork}} </td>	
+        </ng-container>	
+	
+        <!-- career Column -->	
+        <ng-container matColumnDef="career">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Career </th>	
+          <td mat-cell *matCellDef="let element"> {{element.career}} </td>	
+        </ng-container>	
+	
+        <!-- descriptionwork Column -->	
+        <ng-container matColumnDef="descriptionwork">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Descriptionwork </th>	
+          <td mat-cell *matCellDef="let element"> {{element.descriptionwork}} </td>	
+        </ng-container>	
+	
+        <!-- benefit Column -->	
+        <ng-container matColumnDef="benefit">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Benefit </th>	
+          <td mat-cell *matCellDef="let element"> {{element.benefit}} </td>	
+        </ng-container>	
+	
+        <!-- exprience Column -->	
+        <ng-container matColumnDef="exprience">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Exprience </th>	
+          <td mat-cell *matCellDef="let element"> {{element.exprience}} </td>	
+        </ng-container>	
+	
+        <!-- academiclevel Column -->	
+        <ng-container matColumnDef="academiclevel">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Academiclevel </th>	
+          <td mat-cell *matCellDef="let element"> {{element.academiclevel}} </td>	
+        </ng-container>	
+	
+        <!-- sex Column -->	
+        <ng-container matColumnDef="sex">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Sex </th>	
+          <td mat-cell *matCellDef="let element"> {{element.sex}} </td>	
+        </ng-container>	
+	
+        <!-- languagelevel Column -->	
+        <ng-container matColumnDef="languagelevel">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Languagelevel </th>	
+          <td mat-cell *matCellDef="let element"> {{element.languagelevel}} </td>	
+        </ng-container>	
+	
+        <!-- deadlineapply Column -->	
+        <ng-container matColumnDef="deadlineapply">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Deadlineapply </th>	
+          <td mat-cell *matCellDef="let element"> {{element.deadlineapply}} </td>	
+        </ng-container>	
+	
+        <!-- requirementwork Column -->	
+        <ng-container matColumnDef="requirementwork">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Requirementwork </th>	
+          <td mat-cell *matCellDef="let element"> {{element.requirementwork}} </td>	
+        </ng-container>	
+	
+        <!-- requirementdocument Column -->	
+        <ng-container matColumnDef="requirementdocument">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Requirementdocument </th>	
+          <td mat-cell *matCellDef="let element"> {{element.requirementdocument}} </td>	
+        </ng-container>	
+	
+        <!-- fullname Column -->	
+        <ng-container matColumnDef="fullname">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Fullname </th>	
+          <td mat-cell *matCellDef="let element"> {{element.fullname}} </td>	
+        </ng-container>	
+	
+        <!-- phone Column -->	
+        <ng-container matColumnDef="phone">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>	
+          <td mat-cell *matCellDef="let element"> {{element.phone}} </td>	
+        </ng-container>	
+	
+        <!-- email Column -->	
+        <ng-container matColumnDef="email">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>	
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>	
+        </ng-container>	
+	
+        <!-- positioncontact Column -->	
+        <ng-container matColumnDef="positioncontact">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Positioncontact </th>	
+          <td mat-cell *matCellDef="let element"> {{element.positioncontact}} </td>	
+        </ng-container>	
+	
+        <!-- point Column -->	
+        <ng-container matColumnDef="point">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Point </th>	
+          <td mat-cell *matCellDef="let element"> {{element.point}} </td>	
+        </ng-container>	
+	
+        <!-- startads Column -->	
+        <ng-container matColumnDef="startads">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Startads </th>	
+          <td mat-cell *matCellDef="let element"> {{element.startads}} </td>	
+        </ng-container>	
+	
+        <!-- endads Column -->	
+        <ng-container matColumnDef="endads">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Endads </th>	
+          <td mat-cell *matCellDef="let element"> {{element.endads}} </td>	
+        </ng-container>	
+	
+	
+	
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>	
+<tr mat-row (dblclick)="onUpdateData(row)" class="example-element-row" *matRowDef="let row; columns: displayedColumns;">	
+</tr>	
+</table>	
+	
+<mat-paginator [pageSizeOptions]="[5, 10, 20, 40]" showFirstLastButtons></mat-paginator>	
+</div>	

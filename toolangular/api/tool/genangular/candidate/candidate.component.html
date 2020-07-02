@@ -1,0 +1,309 @@
+<mat-card class="title-block">                                                                                
+    <div class="row">                                                                                         
+        <div class="col-md-12 title-main">                                                                    
+            <p>Quản Lý Người Dùng</p>                                                                           
+        </div>                                                                                                  
+    </div>                                                                                                      
+</mat-card>                                                                                                     
+                                                                                                                
+<!-- select-top -->                                                                                             
+<mat-card class="system-custom">                                                                              
+    <div class="row">                                                                                         
+        <div class="col-md-6 col-xs-12">                                                                      
+            <mat-form-field class="example-full-width">                                                       
+                <mat-label>Tên Người Dùng</mat-label>                                                           
+                <input matInput placeholder="Nhập tên người dùng..." />                                       
+            </mat-form-field>                                                                                   
+        </div>                                                                                                  
+        <div class="col-md-6">                                                                                
+            <div class="example-button-row contain-button-filter">                                            
+                <button class="mb-2 mr-2 btn-transition btn btn-outline-primary button-filter">Lọc            
+                </button>                                                                                       
+            </div>                                                                                              
+        </div>                                                                                                  
+    </div>                                                                                                      
+</mat-card>                                                                                                     
+<!--  end select-top -->                                                                                        
+                                                                                                                
+<!-- button crud -->                                                                                            
+<mat-card class="button-system-custom title-header-crud">                                                     
+    <div class="row">                                                                                         
+        <div class="col-md-12">                                                                               
+            <a class="button-action acept" (click)="onInsertData()">                                        
+                <i class="fa fa-fw" aria-hidden="true" title="Thêm mới"></i>                             
+                <span>Thêm mới</span>                                                                           
+            </a>                                                                                                
+            <div class="clear"></div>                                                                         
+        </div>                                                                                                  
+    </div>                                                                                                      
+                                                                                                                
+    <mat-form-field>                                                                                            
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Tìm kiếm giao dịch">        
+    </mat-form-field>                                                                                           
+</mat-card>                                                                                                     
+<!-- end button crud-->                                                                                         
+	
+<div class="mat-elevation-z8">	
+<table mat-table [dataSource]="dataSource" matSort>	
+	
+        <!-- id Column -->	
+        <ng-container matColumnDef="id">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>	
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>	
+        </ng-container>	
+	
+        <!-- email Column -->	
+        <ng-container matColumnDef="email">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>	
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>	
+        </ng-container>	
+	
+        <!-- password Column -->	
+        <ng-container matColumnDef="password">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Password </th>	
+          <td mat-cell *matCellDef="let element"> {{element.password}} </td>	
+        </ng-container>	
+	
+        <!-- avatar Column -->	
+        <ng-container matColumnDef="avatar">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Avatar </th>	
+          <td mat-cell *matCellDef="let element"> {{element.avatar}} </td>	
+        </ng-container>	
+	
+        <!-- fullname Column -->	
+        <ng-container matColumnDef="fullname">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Fullname </th>	
+          <td mat-cell *matCellDef="let element"> {{element.fullname}} </td>	
+        </ng-container>	
+	
+        <!-- phone Column -->	
+        <ng-container matColumnDef="phone">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>	
+          <td mat-cell *matCellDef="let element"> {{element.phone}} </td>	
+        </ng-container>	
+	
+        <!-- born Column -->	
+        <ng-container matColumnDef="born">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Born </th>	
+          <td mat-cell *matCellDef="let element"> {{element.born}} </td>	
+        </ng-container>	
+	
+        <!-- country Column -->	
+        <ng-container matColumnDef="country">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Country </th>	
+          <td mat-cell *matCellDef="let element"> {{element.country}} </td>	
+        </ng-container>	
+	
+        <!-- city Column -->	
+        <ng-container matColumnDef="city">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>	
+          <td mat-cell *matCellDef="let element"> {{element.city}} </td>	
+        </ng-container>	
+	
+        <!-- provine Column -->	
+        <ng-container matColumnDef="provine">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Provine </th>	
+          <td mat-cell *matCellDef="let element"> {{element.provine}} </td>	
+        </ng-container>	
+	
+        <!-- address Column -->	
+        <ng-container matColumnDef="address">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>	
+          <td mat-cell *matCellDef="let element"> {{element.address}} </td>	
+        </ng-container>	
+	
+        <!-- sex Column -->	
+        <ng-container matColumnDef="sex">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Sex </th>	
+          <td mat-cell *matCellDef="let element"> {{element.sex}} </td>	
+        </ng-container>	
+	
+        <!-- marriage Column -->	
+        <ng-container matColumnDef="marriage">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Marriage </th>	
+          <td mat-cell *matCellDef="let element"> {{element.marriage}} </td>	
+        </ng-container>	
+	
+        <!-- positionapply Column -->	
+        <ng-container matColumnDef="positionapply">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Positionapply </th>	
+          <td mat-cell *matCellDef="let element"> {{element.positionapply}} </td>	
+        </ng-container>	
+	
+        <!-- academiclevel Column -->	
+        <ng-container matColumnDef="academiclevel">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Academiclevel </th>	
+          <td mat-cell *matCellDef="let element"> {{element.academiclevel}} </td>	
+        </ng-container>	
+	
+        <!-- yearsofexperience Column -->	
+        <ng-container matColumnDef="yearsofexperience">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Yearsofexperience </th>	
+          <td mat-cell *matCellDef="let element"> {{element.yearsofexperience}} </td>	
+        </ng-container>	
+	
+        <!-- workingplace Column -->	
+        <ng-container matColumnDef="workingplace">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Workingplace </th>	
+          <td mat-cell *matCellDef="let element"> {{element.workingplace}} </td>	
+        </ng-container>	
+	
+        <!-- career Column -->	
+        <ng-container matColumnDef="career">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Career </th>	
+          <td mat-cell *matCellDef="let element"> {{element.career}} </td>	
+        </ng-container>	
+	
+        <!-- typeofwork Column -->	
+        <ng-container matColumnDef="typeofwork">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Typeofwork </th>	
+          <td mat-cell *matCellDef="let element"> {{element.typeofwork}} </td>	
+        </ng-container>	
+	
+        <!-- level Column -->	
+        <ng-container matColumnDef="level">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Level </th>	
+          <td mat-cell *matCellDef="let element"> {{element.level}} </td>	
+        </ng-container>	
+	
+        <!-- salary Column -->	
+        <ng-container matColumnDef="salary">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Salary </th>	
+          <td mat-cell *matCellDef="let element"> {{element.salary}} </td>	
+        </ng-container>	
+	
+        <!-- minsalary Column -->	
+        <ng-container matColumnDef="minsalary">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Minsalary </th>	
+          <td mat-cell *matCellDef="let element"> {{element.minsalary}} </td>	
+        </ng-container>	
+	
+        <!-- maxsalary Column -->	
+        <ng-container matColumnDef="maxsalary">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Maxsalary </th>	
+          <td mat-cell *matCellDef="let element"> {{element.maxsalary}} </td>	
+        </ng-container>	
+	
+        <!-- targetjob Column -->	
+        <ng-container matColumnDef="targetjob">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Targetjob </th>	
+          <td mat-cell *matCellDef="let element"> {{element.targetjob}} </td>	
+        </ng-container>	
+	
+        <!-- descriptionstargetjob Column -->	
+        <ng-container matColumnDef="descriptionstargetjob">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Descriptionstargetjob </th>	
+          <td mat-cell *matCellDef="let element"> {{element.descriptionstargetjob}} </td>	
+        </ng-container>	
+	
+        <!-- school Column -->	
+        <ng-container matColumnDef="school">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> School </th>	
+          <td mat-cell *matCellDef="let element"> {{element.school}} </td>	
+        </ng-container>	
+	
+        <!-- department Column -->	
+        <ng-container matColumnDef="department">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Department </th>	
+          <td mat-cell *matCellDef="let element"> {{element.department}} </td>	
+        </ng-container>	
+	
+        <!-- certificate Column -->	
+        <ng-container matColumnDef="certificate">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Certificate </th>	
+          <td mat-cell *matCellDef="let element"> {{element.certificate}} </td>	
+        </ng-container>	
+	
+        <!-- specialized Column -->	
+        <ng-container matColumnDef="specialized">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Specialized </th>	
+          <td mat-cell *matCellDef="let element"> {{element.specialized}} </td>	
+        </ng-container>	
+	
+        <!-- classification Column -->	
+        <ng-container matColumnDef="classification">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Classification </th>	
+          <td mat-cell *matCellDef="let element"> {{element.classification}} </td>	
+        </ng-container>	
+	
+        <!-- startadmission Column -->	
+        <ng-container matColumnDef="startadmission">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Startadmission </th>	
+          <td mat-cell *matCellDef="let element"> {{element.startadmission}} </td>	
+        </ng-container>	
+	
+        <!-- endadmission Column -->	
+        <ng-container matColumnDef="endadmission">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Endadmission </th>	
+          <td mat-cell *matCellDef="let element"> {{element.endadmission}} </td>	
+        </ng-container>	
+	
+        <!-- additioninfor Column -->	
+        <ng-container matColumnDef="additioninfor">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Additioninfor </th>	
+          <td mat-cell *matCellDef="let element"> {{element.additioninfor}} </td>	
+        </ng-container>	
+	
+        <!-- posisionold Column -->	
+        <ng-container matColumnDef="posisionold">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Posisionold </th>	
+          <td mat-cell *matCellDef="let element"> {{element.posisionold}} </td>	
+        </ng-container>	
+	
+        <!-- companyold Column -->	
+        <ng-container matColumnDef="companyold">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Companyold </th>	
+          <td mat-cell *matCellDef="let element"> {{element.companyold}} </td>	
+        </ng-container>	
+	
+        <!-- startworked Column -->	
+        <ng-container matColumnDef="startworked">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Startworked </th>	
+          <td mat-cell *matCellDef="let element"> {{element.startworked}} </td>	
+        </ng-container>	
+	
+        <!-- endworked Column -->	
+        <ng-container matColumnDef="endworked">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Endworked </th>	
+          <td mat-cell *matCellDef="let element"> {{element.endworked}} </td>	
+        </ng-container>	
+	
+        <!-- descriptionsoldjob Column -->	
+        <ng-container matColumnDef="descriptionsoldjob">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Descriptionsoldjob </th>	
+          <td mat-cell *matCellDef="let element"> {{element.descriptionsoldjob}} </td>	
+        </ng-container>	
+	
+        <!-- descriptionskill Column -->	
+        <ng-container matColumnDef="descriptionskill">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Descriptionskill </th>	
+          <td mat-cell *matCellDef="let element"> {{element.descriptionskill}} </td>	
+        </ng-container>	
+	
+        <!-- skill Column -->	
+        <ng-container matColumnDef="skill">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Skill </th>	
+          <td mat-cell *matCellDef="let element"> {{element.skill}} </td>	
+        </ng-container>	
+	
+        <!-- language Column -->	
+        <ng-container matColumnDef="language">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Language </th>	
+          <td mat-cell *matCellDef="let element"> {{element.language}} </td>	
+        </ng-container>	
+	
+        <!-- infomation Column -->	
+        <ng-container matColumnDef="infomation">	
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Infomation </th>	
+          <td mat-cell *matCellDef="let element"> {{element.infomation}} </td>	
+        </ng-container>	
+	
+	
+	
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>	
+<tr mat-row (dblclick)="onUpdateData(row)" class="example-element-row" *matRowDef="let row; columns: displayedColumns;">	
+</tr>	
+</table>	
+	
+<mat-paginator [pageSizeOptions]="[5, 10, 20, 40]" showFirstLastButtons></mat-paginator>	
+</div>	

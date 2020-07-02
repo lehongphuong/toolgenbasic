@@ -1,0 +1,8 @@
+7
+user(id,username,password,address,phone,born,sex,email)
+account(id,iduser,username,password,status,ismain,createdate,numberlot,total,avalable,liverage,currency,server)
+transaction(id,idaccount,idstaff,status,type,startdate,money,comment)
+staff(id,username,password,status,startdate,permission)
+categories(id,type,amount,comission)
+comission(id,iduser,idstaff,money)
+linked(id,idstaff,iduser)

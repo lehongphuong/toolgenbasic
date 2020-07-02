@@ -1,0 +1,137 @@
+<mat-card class="border border-info">	
+    <div class="alert alert-info text-center" role="alert">	
+        <h5 class="text-uppercase font-weight-bolder">Thông tin Company</h5>	
+    </div>	
+	
+    <mat-card-content class="custom-overflow">	
+        <!-- email field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.email" [required]="'true'" placeholder="Email">	
+        </mat-form-field>	
+	
+        <!-- password field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.password" [required]="'true'" placeholder="Password">	
+        </mat-form-field>	
+	
+        <!-- avatar field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.avatar" [required]="'true'" placeholder="Avatar">	
+        </mat-form-field>	
+	
+        <!-- fullname field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.fullname" [required]="'true'" placeholder="Fullname">	
+        </mat-form-field>	
+	
+        <!-- phone field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.phone" [required]="'true'" placeholder="Phone">	
+        </mat-form-field>	
+	
+        <!-- companyname field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.companyname" [required]="'true'" placeholder="Companyname">	
+        </mat-form-field>	
+	
+        <!-- companyphone field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.companyphone" [required]="'true'" placeholder="Companyphone">	
+        </mat-form-field>	
+	
+        <!-- personalscale field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.personalscale" [required]="'true'" placeholder="Personalscale">	
+        </mat-form-field>	
+	
+        <!-- address field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.address" [required]="'true'" placeholder="Address">	
+        </mat-form-field>	
+	
+        <!-- city field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.city" [required]="'true'" placeholder="City">	
+        </mat-form-field>	
+	
+        <!-- website field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.website" [required]="'true'" placeholder="Website">	
+        </mat-form-field>	
+	
+        <!-- career field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.career" [required]="'true'" placeholder="Career">	
+        </mat-form-field>	
+	
+        <!-- about field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.about" [required]="'true'" placeholder="About">	
+        </mat-form-field>	
+	
+        <!-- logo field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.logo" [required]="'true'" placeholder="Logo">	
+        </mat-form-field>	
+	
+        <!-- bussinesslicence field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.bussinesslicence" [required]="'true'" placeholder="Bussinesslicence">	
+        </mat-form-field>	
+	
+        <!-- position field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.position" [required]="'true'" placeholder="Position">	
+        </mat-form-field>	
+	
+        <!-- personalemail field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.personalemail" [required]="'true'" placeholder="Personalemail">	
+        </mat-form-field>	
+	
+        <!-- point field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.point" [required]="'true'" placeholder="Point">	
+        </mat-form-field>	
+	
+        <!-- startads field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.startads" [required]="'true'" placeholder="Startads">	
+        </mat-form-field>	
+	
+        <!-- endads field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.endads" [required]="'true'" placeholder="Endads">	
+        </mat-form-field>	
+	
+        <!-- banner field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.banner" [required]="'true'" placeholder="Banner">	
+        </mat-form-field>	
+	
+        <!-- pointbanner field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.pointbanner" [required]="'true'" placeholder="Pointbanner">	
+        </mat-form-field>	
+	
+        <!-- startadsbanner field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.startadsbanner" [required]="'true'" placeholder="Startadsbanner">	
+        </mat-form-field>	
+	
+        <!-- endadsbanner field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.endadsbanner" [required]="'true'" placeholder="Endadsbanner">	
+        </mat-form-field>	
+	
+    </mat-card-content>	
+	
+    <div class="text-center">	
+        <button *ngIf="type == 1" (click)="onDeleteClick()" class="btn btn-danger custom-margin-button" mat-button>Xóa	
+        </button>	
+        <button class="btn btn-warning custom-margin-button" mat-button [mat-dialog-close]="data.animal">Đóng</button>	
+        <button cdkFocusInitial (click)="onOkClick()" class="btn btn-info custom-margin-button" mat-button>Đồng	
+            ý</button>	
+    </div>	
+	
+</mat-card>	

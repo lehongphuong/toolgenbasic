@@ -1,0 +1,37 @@
+<mat-card class="border border-info">	
+    <div class="alert alert-info text-center" role="alert">	
+        <h5 class="text-uppercase font-weight-bolder">Thông tin Message</h5>	
+    </div>	
+	
+    <mat-card-content class="custom-overflow">	
+        <!-- idcandidate field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.idcandidate" [required]="'true'" placeholder="Idcandidate">	
+        </mat-form-field>	
+	
+        <!-- idcompany field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.idcompany" [required]="'true'" placeholder="Idcompany">	
+        </mat-form-field>	
+	
+        <!-- startdate field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.startdate" [required]="'true'" placeholder="Startdate">	
+        </mat-form-field>	
+	
+        <!-- content field -->	
+        <mat-form-field class="example-full-width">	
+          <input matInput [(ngModel)]="input.content" [required]="'true'" placeholder="Content">	
+        </mat-form-field>	
+	
+    </mat-card-content>	
+	
+    <div class="text-center">	
+        <button *ngIf="type == 1" (click)="onDeleteClick()" class="btn btn-danger custom-margin-button" mat-button>Xóa	
+        </button>	
+        <button class="btn btn-warning custom-margin-button" mat-button [mat-dialog-close]="data.animal">Đóng</button>	
+        <button cdkFocusInitial (click)="onOkClick()" class="btn btn-info custom-margin-button" mat-button>Đồng	
+            ý</button>	
+    </div>	
+	
+</mat-card>	

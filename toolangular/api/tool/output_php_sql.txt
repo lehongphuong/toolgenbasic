@@ -1,0 +1,350 @@
+        //******************user************************
+        // user(id,username,password,address,phone,born,sex,email)
+        // Get all data from user
+        case 10: {
+            $sql = |SELECT * FROM user|;
+            break;
+        }
+
+        // Insert data to user
+        case 11: {
+            $sql = |INSERT INTO user(username,password,address,phone,born,sex,email)
+            		VALUES('$data->username','$data->password','$data->address','$data->phone','$data->born','$data->sex','$data->email')|;
+            break;
+        }
+
+        // Update data user
+        case 12: {
+            $sql = |UPDATE user SET username='$data->username', password='$data->password', address='$data->address', phone='$data->phone', born='$data->born', sex='$data->sex', email = '$data->email'
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Delete data of user
+        case 13: {
+            $sql = |DELETE FROM user
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id user
+        case 14: {
+            $sql = |SELECT * FROM user
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id user
+        case 15: {
+            $sql = |SELECT * FROM user
+            		LIMIT $data->offset, $data->limit|;
+            break;
+        }
+
+        // Find data with id user
+        case 16: {
+            $sql = |SELECT COUNT(1) FROM user |;
+            break;
+        }
+
+
+        //******************account************************
+        // account(id,iduser,username,password,status,ismain,createdate,numberlot,total,avalable,liverage,currency,server)
+        // Get all data from account
+        case 20: {
+            $sql = |SELECT * FROM account|;
+            break;
+        }
+
+        // Insert data to account
+        case 21: {
+            $sql = |INSERT INTO account(iduser,username,password,status,ismain,createdate,numberlot,total,avalable,liverage,currency,server)
+            		VALUES('$data->iduser','$data->username','$data->password','$data->status','$data->ismain','$data->createdate','$data->numberlot','$data->total','$data->avalable','$data->liverage','$data->currency','$data->server')|;
+            break;
+        }
+
+        // Update data account
+        case 22: {
+            $sql = |UPDATE account SET iduser='$data->iduser', username='$data->username', password='$data->password', status='$data->status', ismain='$data->ismain', createdate='$data->createdate', numberlot='$data->numberlot', total='$data->total', avalable='$data->avalable', liverage='$data->liverage', currency='$data->currency', server = '$data->server'
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Delete data of account
+        case 23: {
+            $sql = |DELETE FROM account
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id account
+        case 24: {
+            $sql = |SELECT * FROM account
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id account
+        case 25: {
+            $sql = |SELECT * FROM account
+            		LIMIT $data->offset, $data->limit|;
+            break;
+        }
+
+        // Find data with id account
+        case 26: {
+            $sql = |SELECT COUNT(1) FROM account |;
+            break;
+        }
+
+
+        //******************transaction************************
+        // transaction(id,idaccount,idstaff,status,type,startdate,money,comment)
+        // Get all data from transaction
+        case 30: {
+            $sql = |SELECT * FROM transaction|;
+            break;
+        }
+
+        // Insert data to transaction
+        case 31: {
+            $sql = |INSERT INTO transaction(idaccount,idstaff,status,type,startdate,money,comment)
+            		VALUES('$data->idaccount','$data->idstaff','$data->status','$data->type','$data->startdate','$data->money','$data->comment')|;
+            break;
+        }
+
+        // Update data transaction
+        case 32: {
+            $sql = |UPDATE transaction SET idaccount='$data->idaccount', idstaff='$data->idstaff', status='$data->status', type='$data->type', startdate='$data->startdate', money='$data->money', comment = '$data->comment'
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Delete data of transaction
+        case 33: {
+            $sql = |DELETE FROM transaction
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id transaction
+        case 34: {
+            $sql = |SELECT * FROM transaction
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id transaction
+        case 35: {
+            $sql = |SELECT * FROM transaction
+            		LIMIT $data->offset, $data->limit|;
+            break;
+        }
+
+        // Find data with id transaction
+        case 36: {
+            $sql = |SELECT COUNT(1) FROM transaction |;
+            break;
+        }
+
+
+        //******************staff************************
+        // staff(id,username,password,status,startdate,permission)
+        // Get all data from staff
+        case 40: {
+            $sql = |SELECT * FROM staff|;
+            break;
+        }
+
+        // Insert data to staff
+        case 41: {
+            $sql = |INSERT INTO staff(username,password,status,startdate,permission)
+            		VALUES('$data->username','$data->password','$data->status','$data->startdate','$data->permission')|;
+            break;
+        }
+
+        // Update data staff
+        case 42: {
+            $sql = |UPDATE staff SET username='$data->username', password='$data->password', status='$data->status', startdate='$data->startdate', permission = '$data->permission'
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Delete data of staff
+        case 43: {
+            $sql = |DELETE FROM staff
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id staff
+        case 44: {
+            $sql = |SELECT * FROM staff
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id staff
+        case 45: {
+            $sql = |SELECT * FROM staff
+            		LIMIT $data->offset, $data->limit|;
+            break;
+        }
+
+        // Find data with id staff
+        case 46: {
+            $sql = |SELECT COUNT(1) FROM staff |;
+            break;
+        }
+
+
+        //******************categories************************
+        // categories(id,type,amount,comission)
+        // Get all data from categories
+        case 50: {
+            $sql = |SELECT * FROM categories|;
+            break;
+        }
+
+        // Insert data to categories
+        case 51: {
+            $sql = |INSERT INTO categories(type,amount,comission)
+            		VALUES('$data->type','$data->amount','$data->comission')|;
+            break;
+        }
+
+        // Update data categories
+        case 52: {
+            $sql = |UPDATE categories SET type='$data->type', amount='$data->amount', comission = '$data->comission'
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Delete data of categories
+        case 53: {
+            $sql = |DELETE FROM categories
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id categories
+        case 54: {
+            $sql = |SELECT * FROM categories
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id categories
+        case 55: {
+            $sql = |SELECT * FROM categories
+            		LIMIT $data->offset, $data->limit|;
+            break;
+        }
+
+        // Find data with id categories
+        case 56: {
+            $sql = |SELECT COUNT(1) FROM categories |;
+            break;
+        }
+
+
+        //******************comission************************
+        // comission(id,iduser,idstaff,money)
+        // Get all data from comission
+        case 60: {
+            $sql = |SELECT * FROM comission|;
+            break;
+        }
+
+        // Insert data to comission
+        case 61: {
+            $sql = |INSERT INTO comission(iduser,idstaff,money)
+            		VALUES('$data->iduser','$data->idstaff','$data->money')|;
+            break;
+        }
+
+        // Update data comission
+        case 62: {
+            $sql = |UPDATE comission SET iduser='$data->iduser', idstaff='$data->idstaff', money = '$data->money'
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Delete data of comission
+        case 63: {
+            $sql = |DELETE FROM comission
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id comission
+        case 64: {
+            $sql = |SELECT * FROM comission
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id comission
+        case 65: {
+            $sql = |SELECT * FROM comission
+            		LIMIT $data->offset, $data->limit|;
+            break;
+        }
+
+        // Find data with id comission
+        case 66: {
+            $sql = |SELECT COUNT(1) FROM comission |;
+            break;
+        }
+
+
+        //******************linked************************
+        // linked(id,idstaff,iduser)
+        // Get all data from linked
+        case 70: {
+            $sql = |SELECT * FROM linked|;
+            break;
+        }
+
+        // Insert data to linked
+        case 71: {
+            $sql = |INSERT INTO linked(idstaff,iduser)
+            		VALUES('$data->idstaff','$data->iduser')|;
+            break;
+        }
+
+        // Update data linked
+        case 72: {
+            $sql = |UPDATE linked SET idstaff='$data->idstaff', iduser = '$data->iduser'
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Delete data of linked
+        case 73: {
+            $sql = |DELETE FROM linked
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id linked
+        case 74: {
+            $sql = |SELECT * FROM linked
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id linked
+        case 75: {
+            $sql = |SELECT * FROM linked
+            		LIMIT $data->offset, $data->limit|;
+            break;
+        }
+
+        // Find data with id linked
+        case 76: {
+            $sql = |SELECT COUNT(1) FROM linked |;
+            break;
+        }
+
+

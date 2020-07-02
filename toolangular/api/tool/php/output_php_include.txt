@@ -1,0 +1,14 @@
+include "../Service/10jobs.php";
+include "../Service/20candidate.php";
+include "../Service/30applywork.php";
+include "../Service/40applysave.php";
+include "../Service/50message.php";
+include "../Service/60company.php";
+include "../Service/70candidatesave.php";
+include "../Service/80candidateview.php";
+include "../Service/90coaching.php";
+include "../Service/100package.php";
+include "../Service/110ordercoaching.php";
+include "../Service/120commentcoaching.php";
+include "../Service/130career.php";
+include "../Service/140staff.php";
