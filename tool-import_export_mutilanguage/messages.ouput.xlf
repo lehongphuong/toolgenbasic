@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en-US" datatype="plaintext" original="ng2.template">
+		<body>
+			<trans-unit id="0d0eff7837946a7a26b4bec257e8e53c10828a38" datatype="html">
+				<source>Công Việc</source>
+				<context-group purpose="location">
+					<context context-type="sourcefile">src/app/home-page-user/menu/menu.component.html</context>
+					<context context-type="linenumber">19</context>
+				</context-group>
+				<target xmlns="">Work</target></trans-unit>
+			<trans-unit id="4558c58cf51099a90d809b83365eaeac0e389ac2" datatype="html">
+				<source>Ứng
+                                Viên</source>
+				<context-group purpose="location">
+					<context context-type="sourcefile">src/app/home-page-user/menu/menu.component.html</context>
+					<context context-type="linenumber">22</context>
+				</context-group>
+				<target xmlns="">Candidate</target></trans-unit>
+			<trans-unit id="464b9550ca8e6a357ec147e377128c21001cfdf3" datatype="html">
+				<source>Công Ty</source>
+				<context-group purpose="location">
+					<context context-type="sourcefile">src/app/home-page-user/menu/menu.component.html</context>
+					<context context-type="linenumber">26</context>
+				</context-group>
+				<target xmlns="">Company</target></trans-unit>
+			<trans-unit id="1c848358cc7fe8638361b189f04c811e1f03697f" datatype="html">
+				<source>
+                                Tài Khoản
+                            </source>
+				<context-group purpose="location">
+					<context context-type="sourcefile">src/app/home-page-user/menu/menu.component.html</context>
+					<context context-type="linenumber">29</context>
+				</context-group>
+				<target xmlns="">Account</target></trans-unit>
+			<trans-unit id="0c2114f7f3adc9a345d87f2a061fe196aef7ce09" datatype="html">
+				<source>Nhà Tuyển Dụng</source>
+				<context-group purpose="location">
+					<context context-type="sourcefile">src/app/home-page-user/menu/menu.component.html</context>
+					<context context-type="linenumber">33</context>
+				</context-group>
+				<target xmlns="">Employer</target></trans-unit>
+			<trans-unit id="7b75fa231a97b930a82682d43fb3d1d7672e76a5" datatype="html">
+				<source>Ứng Viên</source>
+				<context-group purpose="location">
+					<context context-type="sourcefile">src/app/home-page-user/menu/menu.component.html</context>
+					<context context-type="linenumber">34</context>
+				</context-group>
+				<target xmlns="">Candidate</target></trans-unit>
+			<trans-unit id="eae65b1eff5fa20178f00d93b55a2c2039537e0d" datatype="html">
+				<source>ID hồ sơ</source>
+				<context-group purpose="location">
+					<context context-type="sourcefile">src/app/home-page-manager/content-company/c3-employer-profile/c3-view-profile-dialog.component.html</context>
+					<context context-type="linenumber">11</context>
+				</context-group>
+				<target xmlns="">Profile ID</target></trans-unit>
+		</body>
+	</file>
+</xliff>
