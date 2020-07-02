@@ -1,0 +1,11 @@
+10
+user(id,phone,password,fullname,address,image,point)
+invite(id,iduser,idinvite,startdate)
+service(id,name,price)
+employee(id,fullname,phone,password,image,job,startworking,exp)
+booking(id,dateorder,timeorder,idservice,idemployee,status,startdate) 
+product(id,image,productname,price,description,uselink,amount) 
+order(id,idproduct,iduser,status,startdate,amount)
+message(id,iduser,idemployee,isuser,isemployee,content,startdate) 
+notification(id,title,description,startdate,status)
+comment(id,idbooking,idemployee,iduser,startdate,rate,feedback)
