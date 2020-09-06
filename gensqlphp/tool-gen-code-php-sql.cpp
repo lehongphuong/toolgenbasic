@@ -48,7 +48,7 @@ void genService(string s, int ans){
 	cout<<"        // "<<s<<endl;
 	cout<<"        // Get all data from "<<table<<endl;
 	cout<<"        case "<<ans<<": {"<<endl;
-	cout<<"            $sql = |SELECT * FROM "<<table<<"|;"<<endl;
+	cout<<"            $sql = \"SELECT * FROM "<<table<<"\";"<<endl;
 	cout<<"            break;"<<endl;
 	cout<<"        }"<<endl<<endl;
 		
@@ -69,47 +69,47 @@ void genService(string s, int ans){
 	// Insert data to table 
 	cout<<"        // Insert data to "<<table<<endl;
 	cout<<"        case "<<ans + 1<<": {"<<endl;
-	cout<<"            $sql = |INSERT INTO "<<table<<"("+param1+""<<endl;
-	cout<<"            		VALUES("+param2+")|;"<<endl;
+	cout<<"            $sql = \"INSERT INTO "<<table<<"("+param1+""<<endl;
+	cout<<"            		VALUES("+param2+")\";"<<endl;
 	cout<<"            break;"<<endl;
 	cout<<"        }"<<endl<<endl;
 	
 	// Update data table 
 	cout<<"        // Update data "<<table<<endl;
 	cout<<"        case "<<ans + 2<<": {"<<endl;
-	cout<<"            $sql = |UPDATE "<<table<<" SET "+param3+""<<endl;
-	cout<<"            		WHERE id='$data->id'|;"<<endl;
+	cout<<"            $sql = \"UPDATE "<<table<<" SET "+param3+""<<endl;
+	cout<<"            		WHERE id='$data->id'\";"<<endl;
 	cout<<"            break;"<<endl;
 	cout<<"        }"<<endl<<endl;
 	
 	// Delete data from id
 	cout<<"        // Delete data of "<<table<<endl;
 	cout<<"        case "<<ans + 3<<": {"<<endl;
-	cout<<"            $sql = |DELETE FROM "<<table<<endl;
-	cout<<"            		WHERE id IN($data->id)|;"<<endl;
+	cout<<"            $sql = \"DELETE FROM "<<table<<endl;
+	cout<<"            		WHERE id IN($data->id)\";"<<endl;
 	cout<<"            break;"<<endl;
 	cout<<"        }"<<endl<<endl;
 	
 	// Find data with id
 	cout<<"        // Find data with id "<<table<<endl;
 	cout<<"        case "<<ans + 4<<": {"<<endl;
-	cout<<"            $sql = |SELECT * FROM "<<table<<endl;
-	cout<<"            		WHERE id='$data->id'|;"<<endl;
+	cout<<"            $sql = \"SELECT * FROM "<<table<<endl;
+	cout<<"            		WHERE id='$data->id'\";"<<endl;
 	cout<<"            break;"<<endl;
 	cout<<"        }"<<endl<<endl;
 	
 	// Select with pagination(offset, number-item-in-page)
 	cout<<"        // Select with pagination(offset, number-item-in-page) "<<table<<endl;
 	cout<<"        case "<<ans + 5<<": {"<<endl;
-	cout<<"            $sql = |SELECT * FROM "<<table<<endl;
-	cout<<"            		LIMIT $data->offset, $data->limit|;"<<endl;
+	cout<<"            $sql = \"SELECT * FROM "<<table<<endl;
+	cout<<"            		LIMIT $data->offset, $data->limit\";"<<endl;
 	cout<<"            break;"<<endl;
 	cout<<"        }"<<endl<<endl;
 	
 	// Count number item of table
 	cout<<"        // Count number item of "<<table<<endl;
 	cout<<"        case "<<ans + 6<<": {"<<endl;
-	cout<<"            $sql = |SELECT COUNT(1) FROM "<<table<<" |;"<<endl; 
+	cout<<"            $sql = \"SELECT COUNT(1) FROM "<<table<<" \";"<<endl; 
 	cout<<"            break;"<<endl;
 	cout<<"        }"<<endl<<endl;
 	 
@@ -134,7 +134,7 @@ int main(){
 		ostream << ans;  
 		string fileName = ostream.str() + table + ".php";
 		
-		cout<<"include |../Service/"<<fileName<<"|;"<<endl;
+		cout<<"include \"../Service/"<<fileName<<"\";"<<endl;
 		
 		// gen server
 		genService(s, ans);

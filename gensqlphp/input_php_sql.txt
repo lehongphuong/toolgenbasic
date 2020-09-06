@@ -1,4 +1,4 @@
-10
+16
 user(id,phone,password,fullname,address,image,point)
 invite(id,iduser,idinvite,startdate)
 service(id,name,price)
@@ -9,3 +9,9 @@ order(id,idproduct,iduser,status,startdate,amount)
 message(id,iduser,idemployee,isuser,isemployee,content,startdate) 
 notification(id,title,description,startdate,status)
 comment(id,idbooking,idemployee,iduser,startdate,rate,feedback)
+sett1ing(id,androidlink,ioslink,namebank,numberbank,brachbank,promotion)
+setti2ng(id,androidlink,ioslink,namebank,numberbank,brachbank,promotion)
+settin3g(id,androidlink,ioslink,namebank,numberbank,brachbank,promotion)
+settin4g(id,androidlink,ioslink,namebank,numberbank,brachbank,promotion)
+settin5g(id,androidlink,ioslink,namebank,numberbank,brachbank,promotion)
+setting(id,androidlink,ioslink,namebank,numberbank,brachbank,promotion)

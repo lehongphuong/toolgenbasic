@@ -1,0 +1,4 @@
+3
+Project(id,name,createdate)
+Class(id,idproject,classname,properties,attributes) 
+CRUD(id,idproject,idclass,createdate,actiontype,titles,properties,alias,refers,display,titlecreate,titleupdate,inputtypes,validates,formats)
