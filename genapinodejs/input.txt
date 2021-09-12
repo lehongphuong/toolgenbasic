@@ -1,0 +1,11 @@
+6
+account(id,account,role,fullname,username,password,sex,avatar,born,phone,email,address,status,cmnd,famalyId,incomeCurrent,percentCondition,referralCode,createdAt,updatedAt,endDateAt)
+menu(id,menu,isGroup,name,slug,icon,position)
+role(id,name,salary,condition,description,bonus,conditionBonus,descriptionBonus)
+roleDetail(id,role,menu,status) 
+lop(id,name,born,detail,address)
+sinhvien(id,lop,fullname)
+ebook(id,grade,bookType,name,thumbnail,pdfUrl,totalPage,publisher)
+grade(id,name)
+ebook(id,grade,bookType,name,thumbnail,pdfUrl,totalPage,publisher)
+setting(id,chplayUrl,appstoreUrl)
